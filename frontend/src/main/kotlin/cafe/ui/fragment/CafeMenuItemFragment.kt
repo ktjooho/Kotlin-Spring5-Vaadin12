@@ -6,11 +6,12 @@ import com.vaadin.flow.component.button.ButtonVariant
 import com.vaadin.flow.component.html.Div
 import com.vaadin.flow.component.html.Label
 import com.vaadin.flow.component.icon.VaadinIcon
+import com.vaadin.flow.component.orderedlayout.VerticalLayout
 import kotlin.random.Random
 import kotlin.random.nextInt
 
 
-class CafeMenuItemFragment(item:CafeMenuItem) : Div() {
+class CafeMenuItemFragment(item:CafeMenuItem) : VerticalLayout() {
 
     val addButton = Button()
     val itemDesclabel = Label()

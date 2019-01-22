@@ -19,15 +19,9 @@ class MainView : AppLayout(), RouterLayout {
     @Autowired
     lateinit var orderView:CafeOrderView
 
-    init {
-
-    }
-
     @PostConstruct
     fun init() {
-        val menu = this.createMenu()
-        print("Hello")
-        val x = 20
+        val menu = createMenu()
         menu.addMenuItem(VaadinIcon.COFFEE.create(), "Cafe Service") {
             setContent(orderView)
         }
