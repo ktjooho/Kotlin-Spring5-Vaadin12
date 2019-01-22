@@ -14,10 +14,16 @@ class OrderService {
         val names = setOf("Dolche Latte", "Cold Brew", "Avocado Blended")
         val quantities = setOf(100,200,300,400,500)
         val prices = setOf(4_000, 2_000, 3_200, 10_000)
-
+        val hashSet = HashSet<CafeMenuItem>()
+        for(x in 0..size.random()){
+            hashSet.add(CafeMenuItem(names.random(), quantities.random(), "Test", prices.random()))
+        }
+        return hashSet
+        /*
         return generateSequence { size.random() }.map {
-            CafeMenuItem(names.random(), quantities.random(), URI.create("Not Yet"), prices.random())
+            CafeMenuItem(names.random(), quantities.random(), "https://news.artnet.com/app/news-upload/2015/11/Starbucks-free-to-use-e1447954491107.jpg", prices.random())
         }.toHashSet()
+        */
     }
 
 }
